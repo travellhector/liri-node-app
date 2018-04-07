@@ -38,16 +38,16 @@ function myTweets() {
 
     // var keys = require('keys.js');
     
-    // var params = {screen_name: 'nodejs'};
-    // client.get('statuses/user_timeline', params, function(error, tweets, response) {
-    // if (!error) {
-    //     console.log(tweets);
-    // }
-    // });
+    var params = {screen_name: 'alias_acct'};
+    client.get('statuses/user_timeline', params, function(error, tweets, response) {
+    if (!error) {
+        console.log(tweets[0].text);
+    }
+    });
 
-    client.get('search/tweets', {q: 'node.js'}, function(error, tweets, response) {
-        console.log(tweets);
-     });
+    // client.get('search/tweets', {q: 'node.js'}, function(error, tweets, response) {
+    //     console.log(tweets);
+    //  });
 }
 
 function thisSong() {
